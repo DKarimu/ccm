@@ -23,7 +23,7 @@ emails settings:
       - title3
 
 Options:
-  receiving email label name: inbox
+  receiving email label name: inbox # Default
 
 database:
   host: your-database-host
