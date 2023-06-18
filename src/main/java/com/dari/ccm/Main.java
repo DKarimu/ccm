@@ -1,7 +1,9 @@
 package com.dari.ccm;
 
+import com.dari.ccm.checkmaster.ConfigFileChecker;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        ConfigFileChecker cn = new ConfigFileChecker();
     }
 }

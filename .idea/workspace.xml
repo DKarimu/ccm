@@ -4,16 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="746af9f1-11cf-4be3-9ba1-72a3c75e387a" name="Changes" comment="add package &quot;com.dari.ccm.checkmaster&quot;">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/beans/Configurations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/checkmaster/EmailAccessibilityChecker.java" afterDir="false" />
+    <list default="true" id="746af9f1-11cf-4be3-9ba1-72a3c75e387a" name="Changes" comment="add to &quot;com.dari.ccm.checkmaster&quot;">
+      <change afterPath="$PROJECT_DIR$/logs/202306169_application.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/utils/ConfigLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/utils/LogUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ccm_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ccm_config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ex_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ex_config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/checkmaster/DatabaseChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/checkmaster/DatabaseChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/checkmaster/SettingFileChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/checkmaster/ConfigFileChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dari/ccm/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dari/ccm/beans/Configurations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/entitys/Configurations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dari/ccm/checkmaster/ConfigFileChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/checkmaster/ConfigFileChecker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,19 +51,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Projects/ccm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Projects/ccm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.dari.ccm" />
@@ -68,14 +72,20 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Projects\ccm" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projects\ccm\src\main\resources" />
+      <recent name="C:\Projects\ccm" />
+      <recent name="C:\Projects\ccm\src\main\java\com\dari\ccm\utils" />
+      <recent name="C:\Projects\ccm\src" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Test">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.dari.ccm.Main" />
       <module name="ccm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dari.ccm.beans.*" />
+          <option name="PATTERN" value="com.dari.ccm.entitys.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -83,8 +93,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <module name="ccm" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -126,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686785068229</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add to &quot;com.dari.ccm.checkmaster&quot;">
+      <created>1686872515896</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1686872515896</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -145,6 +170,22 @@
     <MESSAGE value="ccm init" />
     <MESSAGE value="add README.md" />
     <MESSAGE value="add package &quot;com.dari.ccm.checkmaster&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="add package &quot;com.dari.ccm.checkmaster&quot;" />
+    <MESSAGE value="add to &quot;com.dari.ccm.checkmaster&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="add to &quot;com.dari.ccm.checkmaster&quot;" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dari/ccm/entitys/Configurations.java</url>
+          <line>10</line>
+          <properties class="com.dari.ccm.entitys.Configurations" method="getApplication">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

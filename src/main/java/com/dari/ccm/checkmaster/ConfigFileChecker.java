@@ -1,44 +1,24 @@
 package com.dari.ccm.checkmaster;
 
-import org.yaml.snakeyaml.Yaml;
-
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.util.Map;
+import com.dari.ccm.entitys.Configurations;
+import com.dari.ccm.utils.ConfigLoader;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class ConfigFileChecker {
-    public static boolean configFileChecker(String filePath) {
+    private static final Logger logger = LogManager.getLogger(ConfigFileChecker.class);
+    private static final String CONFIG_FILE_NAME = "ccm_config.yaml";
+
+    public static boolean configFileChecker() {
         try {
-            // Load the YAML file
-            Yaml yaml = new Yaml();
-            FileInputStream fileInputStream = new FileInputStream(filePath);
-            Map<String, Object> configFile = yaml.load(fileInputStream);
-            // Check if the required items exist
-            if (configFile.containsKey("application") &&
-                    configFile.containsKey("emails settings") &&
-                    configFile.containsKey("Options") &&
-                    configFile.containsKey("database")) {
-                Map<String, Object> application = (Map<String, Object>) configFile.get("application");
-                Map<String, Object> emailSettings = (Map<String, Object>) configFile.get("emails settings");
-                Map<String, Object> options = (Map<String, Object>) configFile.get("Options");
-                Map<String, Object> database = (Map<String, Object>) configFile.get("database");
-                if (application.containsKey("application version") &&
-                        application.containsKey("application loges file full-path") &&
-                        emailSettings.containsKey("users email") &&
-                        emailSettings.containsKey("users email password") &&
-                        emailSettings.containsKey("target email addresses") &&
-                        options.containsKey("receiving email label name") &&
-                        database.containsKey("host") &&
-                        database.containsKey("port") &&
-                        database.containsKey("username") &&
-                        database.containsKey("password") &&
-                        database.containsKey("database")) {
-                    return true;
-                }
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            ConfigLoader loader = new ConfigLoader(CONFIG_FILE_NAME);
+            loader.load(Configurations.class);
+            logger.debug("configFileChecker() ->OK");
+            return true;
+        } catch (Exception e) {
+            logger.error(e.getMessage());
         }
+        logger.debug("configFileChecker() ->NG");
         return false;
     }
 }
