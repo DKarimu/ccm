@@ -23,8 +23,9 @@ options:
     - inbox # Default
 
 database:
+#  url: jdbc:postgresql://localhost:5432/postgres
   host: your-database-host
-  port: your-database-port
-  username: your-database-username
-  password: your-database-password
-  database: your-database-name
+  port: 5432
+  username: postgres
+  password: ccm1
+  database: postgresx
