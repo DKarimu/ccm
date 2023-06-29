@@ -1,18 +1,21 @@
 package com.dari.ccm.entitys;
 
-import java.util.List;
+import com.dari.ccm.utils.ConfigLoader;
 
-public class Configurations {
-    private ApplicationSettings application;
+import java.util.List;
+import java.util.Map;
+
+public class ApplicationConfig {
+    private Application application;
     private EmailSettings emailSettings;
     private Options options;
-    private DatabaseSettings database;
+    private DatabaseConfig database;
 
-    public ApplicationSettings getApplication() {
+    public Application getApplication() {
         return application;
     }
 
-    public void setApplication(ApplicationSettings application) {
+    public void setApplication(Application application) {
         this.application = application;
     }
 
@@ -32,17 +35,16 @@ public class Configurations {
         this.options = options;
     }
 
-    public DatabaseSettings getDatabase() {
+    public DatabaseConfig getDatabase() {
         return database;
     }
 
-    public void setDatabase(DatabaseSettings database) {
+    public void setDatabase(DatabaseConfig database) {
         this.database = database;
     }
 
-    public static class ApplicationSettings {
+    public static class Application {
         private String applicationVersion;
-        private String applicationLogFilePath;
 
         public String getApplicationVersion() {
             return applicationVersion;
@@ -51,36 +53,29 @@ public class Configurations {
         public void setApplicationVersion(String applicationVersion) {
             this.applicationVersion = applicationVersion;
         }
-
-        public String getApplicationLogFilePath() {
-            return applicationLogFilePath;
-        }
-
-        public void setApplicationLogFilePath(String applicationLogFilePath) {
-            this.applicationLogFilePath = applicationLogFilePath;
-        }
     }
 
     public static class EmailSettings {
-        private List<String> usersEmail;
-        private List<String> usersEmailPassword;
+        private String userEmail;
+        private String userEmailPassword;
         private List<String> targetEmailAddresses;
         private List<String> targetEmailTitle;
+        private Map<String, String> properties;
 
-        public List<String> getUsersEmail() {
-            return usersEmail;
+        public String getUserEmail() {
+            return userEmail;
         }
 
-        public void setUsersEmail(List<String> usersEmail) {
-            this.usersEmail = usersEmail;
+        public void setUserEmail(String userEmail) {
+            this.userEmail = userEmail;
         }
 
-        public List<String> getUsersEmailPassword() {
-            return usersEmailPassword;
+        public String getUserEmailPassword() {
+            return userEmailPassword;
         }
 
-        public void setUsersEmailPassword(List<String> usersEmailPassword) {
-            this.usersEmailPassword = usersEmailPassword;
+        public void setUserEmailPassword(String userEmailPassword) {
+            this.userEmailPassword = userEmailPassword;
         }
 
         public List<String> getTargetEmailAddresses() {
@@ -98,6 +93,14 @@ public class Configurations {
         public void setTargetEmailTitle(List<String> targetEmailTitle) {
             this.targetEmailTitle = targetEmailTitle;
         }
+
+        public Map<String, String> getProperties() {
+            return properties;
+        }
+
+        public void setProperties(Map<String, String> properties) {
+            this.properties = properties;
+        }
     }
 
     public static class Options {
@@ -112,12 +115,21 @@ public class Configurations {
         }
     }
 
-    public static class DatabaseSettings {
+    public static class DatabaseConfig {
+        private String url;
         private String host;
-        private String port;
+        private int port;
         private String username;
         private String password;
         private String database;
+
+        public String getUrl() {
+            return url;
+        }
+
+        public void setUrl(String url) {
+            this.url = url;
+        }
 
         public String getHost() {
             return host;
@@ -127,11 +139,11 @@ public class Configurations {
             this.host = host;
         }
 
-        public String getPort() {
+        public int getPort() {
             return port;
         }
 
-        public void setPort(String port) {
+        public void setPort(int port) {
             this.port = port;
         }
 

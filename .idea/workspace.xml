@@ -4,22 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="746af9f1-11cf-4be3-9ba1-72a3c75e387a" name="Changes" comment="create Logger and more">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bat/application_job_runner.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bat/db_service_runner.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bat/db_service_stoper.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/20230627_application.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/entitys/Email.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/process/PostgreSQLManager.java" afterDir="false" />
+    <list default="true" id="746af9f1-11cf-4be3-9ba1-72a3c75e387a" name="Changes" comment="progressing in EmailAccessibilityChecker">
+      <change afterPath="$PROJECT_DIR$/emailhtmls/file.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/20230629_application.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/EmailFileParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ccm_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ccm_config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ex_config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/202306169_application.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dari/ccm/checkmaster/ConfigFileChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/checkmaster/ConfigFileChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dari/ccm/checkmaster/DatabaseChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/checkmaster/DatabaseChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dari/ccm/checkmaster/EmailAccessibilityChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/checkmaster/EmailAccessibilityChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dari/ccm/checkmaster/EmailAccessibilityChecker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dari/ccm/entitys/Configurations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/entitys/ApplicationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dari/ccm/utils/ConfigLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/utils/ConfigLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dari/ccm/utils/LogUtil.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -170,10 +168,18 @@
       <option name="project" value="LOCAL" />
       <updated>1687088182719</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="progressing in EmailAccessibilityChecker">
+      <created>1688029803672</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1688029803672</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.bat" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -194,7 +200,8 @@
     <MESSAGE value="add package &quot;com.dari.ccm.checkmaster&quot;" />
     <MESSAGE value="add to &quot;com.dari.ccm.checkmaster&quot;" />
     <MESSAGE value="create Logger and more" />
-    <option name="LAST_COMMIT_MESSAGE" value="create Logger and more" />
+    <MESSAGE value="progressing in EmailAccessibilityChecker" />
+    <option name="LAST_COMMIT_MESSAGE" value="progressing in EmailAccessibilityChecker" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

@@ -1,14 +1,10 @@
 application:
   applicationVersion: 0.0.0
-  applicationLogFilePath: c/cc
 
 emailSettings:
-  usersEmail:
-    - user1@example.com
-    - user2@example.com
-  usersEmailPassword: # Passwords will be encrypted after initial setting !!
-    - password1
-    - password2
+  userEmail: d.erikrimo@gmail.com
+  # Passwords will be encrypted after initial setting !!
+  userEmailPassword: dezjuhssjodpzyke
   targetEmailAddresses:
     - target1@example.com
     - target2@example.com
@@ -17,13 +13,18 @@ emailSettings:
     - title1
     - title2
     - title3
+  properties:
+    protocol: imaps
+    host: imap.gmail.com
+    port: 993
 
 options:
   receivingEmailLabelName:
-    - inbox # Default
+    - マク
+#    - INBOX # Default
 
 database:
-#  url: jdbc:postgresql://localhost:5432/postgres
+  url: jdbc:postgresql://localhost:5432/postgres
   host: your-database-host
   port: 5432
   username: postgres
