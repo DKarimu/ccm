@@ -1,32 +1,48 @@
 package com.dari.ccm.entitys;
 
+import javax.persistence.*;
+import java.time.LocalDate;
+
+@Entity
+@Table(name = "credit_card")
 public class CreditCard {
-    private int id;
-    private String cardName;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int cardId;
+    private Users user;
+    private String cardNumber;
     private String cardHolderName;
-    private String status;
+    private LocalDate expirationDate;
 
-    public CreditCard(int id, String cardName, String cardHolderName, String status) {
-        this.id = id;
-        this.cardName = cardName;
+    public CreditCard(Users user, String cardNumber, String cardHolderName, LocalDate expirationDate) {
+        this.user = user;
+        this.cardNumber = cardNumber;
         this.cardHolderName = cardHolderName;
-        this.status = status;
+        this.expirationDate = expirationDate;
     }
 
-    public int getId() {
-        return id;
+    public int getCardId() {
+        return cardId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCardId(int cardId) {
+        this.cardId = cardId;
     }
 
-    public String getCardName() {
-        return cardName;
+    public Users getUser() {
+        return user;
     }
 
-    public void setCardName(String cardName) {
-        this.cardName = cardName;
+    public void setUser(Users user) {
+        this.user = user;
+    }
+
+    public String getCardNumber() {
+        return cardNumber;
+    }
+
+    public void setCardNumber(String cardNumber) {
+        this.cardNumber = cardNumber;
     }
 
     public String getCardHolderName() {
@@ -37,21 +53,22 @@ public class CreditCard {
         this.cardHolderName = cardHolderName;
     }
 
-    public String getStatus() {
-        return status;
+    public LocalDate getExpirationDate() {
+        return expirationDate;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setExpirationDate(LocalDate expirationDate) {
+        this.expirationDate = expirationDate;
     }
 
     @Override
     public String toString() {
         return "CreditCard{" +
-                "id=" + id +
-                ", cardName='" + cardName + '\'' +
+                "cardId=" + cardId +
+                ", user=" + user +
+                ", cardNumber='" + cardNumber + '\'' +
                 ", cardHolderName='" + cardHolderName + '\'' +
-                ", status='" + status + '\'' +
+                ", expirationDate=" + expirationDate +
                 '}';
     }
 }

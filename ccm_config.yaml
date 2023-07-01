@@ -24,9 +24,9 @@ options:
 #    - INBOX # Default
 
 database:
-  url: jdbc:postgresql://localhost:5432/postgres
+  url: jdbc:postgresql://localhost:5432/CCM
   host: your-database-host
   port: 5432
-  username: postgres
+  username: CCM
   password: ccm1
-  database: postgresx
+  database: CCM

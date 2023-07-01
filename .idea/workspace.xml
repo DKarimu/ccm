@@ -6,16 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="746af9f1-11cf-4be3-9ba1-72a3c75e387a" name="Changes" comment="progressing">
       <change afterPath="$PROJECT_DIR$/logs/20230701_application.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/entitys/CreditCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/entitys/Payment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/entitys/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/utils/DataExtractor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/entitys/Users.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emailhtmls/file.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dari/ccm/EmailFileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/EmailFileParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccm_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ccm_config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dari/ccm/entitys/CreditCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/entitys/CreditCard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dari/ccm/entitys/Email.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/entitys/Email.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dari/ccm/utils/ConfigLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/utils/ConfigLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dari/ccm/entitys/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/entitys/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dari/ccm/entitys/User.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688051252486</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="progressing">
+      <created>1688209353361</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1688209353361</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="UnknownFeatures">

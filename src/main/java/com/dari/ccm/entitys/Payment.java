@@ -1,93 +1,55 @@
 package com.dari.ccm.entitys;
 
-import java.math.BigDecimal;
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "payment")
 public class Payment {
-    private int id;
-    private int userId;
-    private int creditCardId;
-    private BigDecimal amount;
-    private LocalDate date;
-    private String status;
-    private String description;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int paymentId;
+    private Users user;
+    private LocalDate paymentDate;
+    private double paymentAmount;
 
-    public Payment(int id, int userId, int creditCardId, BigDecimal amount, LocalDate date, String status, String description) {
-        this.id = id;
-        this.userId = userId;
-        this.creditCardId = creditCardId;
-        this.amount = amount;
-        this.date = date;
-        this.status = status;
-        this.description = description;
+    public Payment(Users user, LocalDate paymentDate, double paymentAmount) {
+        this.user = user;
+        this.paymentDate = paymentDate;
+        this.paymentAmount = paymentAmount;
     }
 
-    public int getId() {
-        return id;
+    public Users getUser() {
+        return user;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setUser(Users user) {
+        this.user = user;
     }
 
-    public int getUserId() {
-        return userId;
+    public LocalDate getPaymentDate() {
+        return paymentDate;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setPaymentDate(LocalDate paymentDate) {
+        this.paymentDate = paymentDate;
     }
 
-    public int getCreditCardId() {
-        return creditCardId;
+    public double getPaymentAmount() {
+        return paymentAmount;
     }
 
-    public void setCreditCardId(int creditCardId) {
-        this.creditCardId = creditCardId;
-    }
-
-    public BigDecimal getAmount() {
-        return amount;
-    }
-
-    public void setAmount(BigDecimal amount) {
-        this.amount = amount;
-    }
-
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDate date) {
-        this.date = date;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+    public void setPaymentAmount(double paymentAmount) {
+        this.paymentAmount = paymentAmount;
     }
 
     @Override
     public String toString() {
         return "Payment{" +
-                "id=" + id +
-                ", userId=" + userId +
-                ", creditCardId=" + creditCardId +
-                ", amount=" + amount +
-                ", date=" + date +
-                ", status='" + status + '\'' +
-                ", description='" + description + '\'' +
+                "paymentId=" + paymentId +
+                ", user=" + user +
+                ", paymentDate=" + paymentDate +
+                ", paymentAmount=" + paymentAmount +
                 '}';
     }
 }
