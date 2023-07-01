@@ -10,7 +10,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class ConfigLoader {
-    private static final Logger logger = LogManager.getLogger(ConfigLoader.class);
+    private static final Logger logger = LogManager.getLogger();
     private static final String CONFIG_FILE_NAME = "ccm_config.yaml";
     private String filePath;
 

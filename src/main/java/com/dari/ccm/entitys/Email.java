@@ -2,7 +2,8 @@ package com.dari.ccm.entitys;
 
 import java.util.Arrays;
 import java.util.Date;
-
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 public class Email {
     private String subject;
     private String[] from;
@@ -38,6 +39,21 @@ public class Email {
         return content;
     }
 
+    public String getPlainTextContent() {
+        String plainText = content;
+
+        // Remove HTML/XML tags
+        plainText = plainText.replaceAll("<[^>]+>", "");
+
+        // Remove [NBSP] (non-breaking space)
+        plainText = plainText.replaceAll("\\u00A0", "");
+
+        // Remove empty lines
+        plainText = plainText.replaceAll("(?m)^\\s*$[\n\r]{1,}", "");
+
+        return plainText.trim();
+    }
+
     @Override
     public String toString() {
         return "Email{" +
@@ -49,4 +65,3 @@ public class Email {
                 '}';
     }
 }
-

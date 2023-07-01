@@ -1,33 +1,38 @@
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-import java.io.File;
-import java.io.IOException;
+import com.dari.ccm.EmailFileParser;
+import com.dari.ccm.entitys.Email;
+import com.dari.ccm.utils.ConfigLoader;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import static com.dari.ccm.utils.DataExtractor.extractAmountFromString;
 
 public class Test {
+    private static final Logger logger = LogManager.getLogger();
+
     public static void main(String[] args) {
-        try {
-            // Path to the HTML file
-            String filePath = "C:\\Projects\\ccm\\emailhtmls\\file.html";
+        ConfigLoader cfg = new ConfigLoader();
+        EmailFileParser ea = new EmailFileParser(cfg.getApplicationConfig());
+//        String pattern = "\\d{1,3}(,\\d{3})* 円";
+        String pattern = "¥(\\d+)";
 
-            // Load the HTML file
-            File htmlFile = new File(filePath);
-            Document doc = Jsoup.parse(htmlFile, "UTF-8");
 
-            // Define your CSS selector
-            String cssSelector = "#templateBody > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td > table:nth-child(4) > tbody > tr:nth-child(2) > td:nth-child(2)"; // Modify this according to your HTML structure
+        // Define your CSS selector
+        String cssSelector = "#m_8374924799506649276m_6701113326483431463m_1020237398342373831body > table > tbody > tr:nth-child(4) > td > table > tbody > tr:nth-child(2) > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr:nth-child(2) > td:nth-child(3) > font"; // Modify this according to your HTML structure
 
-            // Select elements based on the CSS selector
-            Elements elements = doc.select(cssSelector);
-
-            // Iterate over the selected elements
-            for (Element element : elements) {
-                String extractedData = element.text();
-                System.out.println("Extracted data: " + extractedData);
+        Email[] emails = ea.fetchEmails();
+        for (Email email : emails) {
+            String input = email.getPlainTextContent();
+            int amount = extractAmountFromString(input, pattern);
+            try {
+//                logger.debug(email.getContent());
+                logger.debug(email.getSentDate());
+                logger.debug("Extracted amount: " + amount);
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-        } catch (IOException e) {
-            e.printStackTrace();
+
         }
     }
+
+
 }

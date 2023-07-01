@@ -6,6 +6,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.mail.*;
+import javax.mail.internet.MimeMultipart;
 import javax.mail.search.FlagTerm;
 import java.util.ArrayList;
 import java.util.Date;
@@ -14,8 +15,13 @@ import java.util.Properties;
 
 public class EmailFileParser {
     private static final Logger logger = LogManager.getLogger();
+    private final ApplicationConfig config;
 
-    public static Email[] fetchEmails(ApplicationConfig config) {
+    public EmailFileParser(ApplicationConfig config) {
+        this.config = config;
+    }
+
+    public Email[] fetchEmails() {
         try {
             String username = config.getEmailSettings().getUserEmail();
             String password = config.getEmailSettings().getUserEmailPassword();
@@ -47,7 +53,7 @@ public class EmailFileParser {
                     String[] from = toStringArray(message.getFrom());
                     String[] to = toStringArray(message.getRecipients(Message.RecipientType.TO));
                     Date sentDate = message.getSentDate();
-                    String content = message.getContent().toString();
+                    String content = extractMultipartContent(message.getContent());
 
                     Email email = new Email(subject, from, to, sentDate, content);
                     emailList.add(email);
@@ -79,5 +85,36 @@ public class EmailFileParser {
             stringAddresses[i] = addresses[i].toString();
         }
         return stringAddresses;
+    }
+
+
+    private static String extractMultipartContent(Object content) throws Exception {
+        if (content instanceof Multipart) {
+            Multipart multipart = (Multipart) content;
+            return extractMultipartContent(multipart);
+        }
+        return content.toString();
+    }
+
+    private static String extractMultipartContent(Multipart multipart) throws Exception {
+        StringBuilder contentBuilder = new StringBuilder();
+        int count = multipart.getCount();
+
+        for (int i = 0; i < count; i++) {
+            Part part = multipart.getBodyPart(i);
+            if (part.getContent() instanceof MimeMultipart) {
+                MimeMultipart nestedMultipart = (MimeMultipart) part.getContent();
+                String nestedContent = extractMultipartContent(nestedMultipart);
+                contentBuilder.append(nestedContent);
+            } else {
+                // Handle the individual part
+                // You can access the content, content type, etc. of the part
+                // using the methods provided by the Part interface
+                // For example:
+                String partContent = part.getContent().toString();
+                contentBuilder.append(partContent);
+            }
+        }
+        return contentBuilder.toString();
     }
 }
