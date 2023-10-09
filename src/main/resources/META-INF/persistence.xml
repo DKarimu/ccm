@@ -6,8 +6,8 @@
     <persistence-unit name="cc-manager-persistence" transaction-type="RESOURCE_LOCAL">
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/ccm" />
-            <property name="javax.persistence.jdbc.user" value="ccm" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/CCM" />
+            <property name="javax.persistence.jdbc.user" value="postgres" />
             <property name="javax.persistence.jdbc.password" value="ccm1" />
 
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />

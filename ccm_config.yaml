@@ -27,6 +27,6 @@ database:
   url: jdbc:postgresql://localhost:5432/CCM
   host: your-database-host
   port: 5432
-  username: CCM
+  username: postgres
   password: ccm1
   database: CCM

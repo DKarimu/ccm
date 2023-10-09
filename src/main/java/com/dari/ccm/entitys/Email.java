@@ -1,26 +1,30 @@
 package com.dari.ccm.entitys;
 
-import jakarta.persistence.*;
 
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Arrays;
 import java.util.Date;
 
 @Entity
-@Table(name = "email")
 public class Email {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int emailId;
     private String subject;
-    private String[] from;
-    private String[] to;
+    private String[] sender;
+    private String[] receiver;
     private Date sentDate;
     private String content;
 
     public Email(String subject, String[] from, String[] to, Date sentDate, String content) {
         this.subject = subject;
-        this.from = from;
-        this.to = to;
+        this.sender = from;
+        this.receiver = to;
         this.sentDate = sentDate;
         this.content = content;
     }
@@ -41,20 +45,20 @@ public class Email {
         this.subject = subject;
     }
 
-    public String[] getFrom() {
-        return from;
+    public String[] getSender() {
+        return sender;
     }
 
-    public void setFrom(String[] from) {
-        this.from = from;
+    public void setSender(String[] sender) {
+        this.sender = sender;
     }
 
-    public String[] getTo() {
-        return to;
+    public String[] getReceiver() {
+        return receiver;
     }
 
-    public void setTo(String[] to) {
-        this.to = to;
+    public void setReceiver(String[] receiver) {
+        this.receiver = receiver;
     }
 
     public Date getSentDate() {
@@ -78,18 +82,10 @@ public class Email {
         return "Email{" +
                 "emailId=" + emailId +
                 ", subject='" + subject + '\'' +
-                ", from=" + Arrays.toString(from) +
-                ", to=" + Arrays.toString(to) +
+                ", from=" + Arrays.toString(sender) +
+                ", to=" + Arrays.toString(receiver) +
                 ", sentDate=" + sentDate +
                 ", content='" + content + '\'' +
                 '}';
-    }
-
-    public String getPlainTextContent() {
-        String plainText = content;
-        plainText = plainText.replaceAll("<[^>]+>", "");
-        plainText = plainText.replaceAll("\\u00A0", "");
-        plainText = plainText.replaceAll("(?m)^\\s*$[\n\r]{1,}", "");
-        return plainText.trim();
     }
 }

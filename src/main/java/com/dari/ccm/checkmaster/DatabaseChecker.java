@@ -14,14 +14,14 @@ public class DatabaseChecker {
             Class.forName("org.postgresql.Driver");
             Connection connection = DriverManager.getConnection(url, username, password);
             connection.close();
-            logger.debug("->OK: The database is running.");
+            logger.debug("OK: The database is running.");
             return true;
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        logger.error("->NG: The database is not running.");
+        logger.warn("OK: The database is running.");
         return false;
     }
 }

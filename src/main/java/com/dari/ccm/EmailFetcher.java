@@ -13,11 +13,11 @@ import java.util.Date;
 import java.util.List;
 import java.util.Properties;
 
-public class EmailFileParser {
+public class EmailFetcher {
     private static final Logger logger = LogManager.getLogger();
     private final ApplicationConfig config;
 
-    public EmailFileParser(ApplicationConfig config) {
+    public EmailFetcher(ApplicationConfig config) {
         this.config = config;
     }
 
@@ -107,10 +107,6 @@ public class EmailFileParser {
                 String nestedContent = extractMultipartContent(nestedMultipart);
                 contentBuilder.append(nestedContent);
             } else {
-                // Handle the individual part
-                // You can access the content, content type, etc. of the part
-                // using the methods provided by the Part interface
-                // For example:
                 String partContent = part.getContent().toString();
                 contentBuilder.append(partContent);
             }
