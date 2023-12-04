@@ -1,7 +1,5 @@
 package com.dari.ccm.entitys;
 
-import com.dari.ccm.utils.ConfigLoader;
-
 import java.util.List;
 import java.util.Map;
 

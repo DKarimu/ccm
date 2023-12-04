@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="746af9f1-11cf-4be3-9ba1-72a3c75e387a" name="Changes" comment="progressing">
-      <change afterPath="$PROJECT_DIR$/logs/20230702_application.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/service/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/service/ConfigService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/dari/ccm/service/ConfigServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ccm_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ccm_config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dari/ccm/EmailFileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/EmailFetcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dari/ccm/checkmaster/DatabaseChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/checkmaster/DatabaseChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dari/ccm/entitys/Email.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/entitys/Email.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dari/ccm/entitys/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/entitys/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dari/ccm/entitys/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/entitys/ApplicationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dari/ccm/utils/ConfigLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dari/ccm/utils/ConfigLoader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +22,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -65,6 +61,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "last_opened_file_path": "C:/Projects/ccm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
@@ -87,80 +85,85 @@
       <recent name="C:\Projects\ccm\src\main\java\com\dari\ccm\utils" />
       <recent name="C:\Projects\ccm\src" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.dari.ccm.service" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.dari.ccm.service" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Test">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.dari.ccm.Main" />
+  <component name="RunManager" selected="JUnit.ConfigServiceTest">
+    <configuration name="ConfigServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ccm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dari.ccm.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test" />
-      <module name="ccm" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EmailRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ccm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="service" />
-      <option name="MAIN_CLASS_NAME" value="service.EmailRepositoryTest" />
+      <option name="PACKAGE_NAME" value="com.dari.ccm.service" />
+      <option name="MAIN_CLASS_NAME" value="com.dari.ccm.service.ConfigServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmailServiceTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ConfigServiceTest.testGetApplicationVersion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ccm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="service" />
-      <option name="MAIN_CLASS_NAME" value="service.EmailServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.dari.ccm.service" />
+      <option name="MAIN_CLASS_NAME" value="com.dari.ccm.service.ConfigServiceTest" />
+      <option name="METHOD_NAME" value="testGetApplicationVersion" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmailTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ConfigServiceTest.testGetDatabaseUrl" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ccm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="entitys.*" />
+          <option name="PATTERN" value="com.dari.ccm.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="entitys" />
-      <option name="MAIN_CLASS_NAME" value="entitys.EmailTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.dari.ccm.service" />
+      <option name="MAIN_CLASS_NAME" value="com.dari.ccm.service.ConfigServiceTest" />
+      <option name="METHOD_NAME" value="testGetDatabaseUrl" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigServiceTest.testGetEmailProperties" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ccm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dari.ccm.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dari.ccm.service" />
+      <option name="MAIN_CLASS_NAME" value="com.dari.ccm.service.ConfigServiceTest" />
+      <option name="METHOD_NAME" value="testGetEmailProperties" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigServiceTest.testGetReceivingEmailLabelNames" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ccm" />
+      <option name="PACKAGE_NAME" value="com.dari.ccm.service" />
+      <option name="MAIN_CLASS_NAME" value="com.dari.ccm.service.ConfigServiceTest" />
+      <option name="METHOD_NAME" value="testGetReceivingEmailLabelNames" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Test" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.EmailServiceTest (1)" />
-        <item itemvalue="JUnit.EmailTest" />
-        <item itemvalue="JUnit.EmailRepositoryTest" />
+        <item itemvalue="JUnit.ConfigServiceTest" />
+        <item itemvalue="JUnit.ConfigServiceTest.testGetEmailProperties" />
+        <item itemvalue="JUnit.ConfigServiceTest.testGetDatabaseUrl" />
+        <item itemvalue="JUnit.ConfigServiceTest.testGetReceivingEmailLabelNames" />
+        <item itemvalue="JUnit.ConfigServiceTest.testGetApplicationVersion" />
       </list>
     </recent_temporary>
   </component>
@@ -243,7 +246,21 @@
       <option name="project" value="LOCAL" />
       <updated>1688226267842</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="progressing">
+      <created>1696857557652</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1696857557652</updated>
+    </task>
+    <task id="LOCAL-00012" summary="progressing">
+      <created>1696857583658</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1696857583658</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -256,6 +273,11 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
@@ -297,6 +319,10 @@
           <line>13</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.StackOverflowError" package="java.lang" />
+          <option name="timeStamp" value="7" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
@@ -305,6 +331,13 @@
         <PinnedItemInfo parentTag="java.lang.String" memberName="value" />
       </pinned-members>
     </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="e" />
+        <watch expression="((YAMLException)e).detailMessage" custom="org.yaml.snakeyaml.error.YAMLException" />
+        <watch expression="e" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
