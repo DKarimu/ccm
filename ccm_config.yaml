@@ -1,32 +1,32 @@
-  application:
-    applicationVersion: 0.0.0
+application:
+  applicationVersion: 0.0.0
 
-  emailSettings:
-    userEmail: d.erikrimo@gmail.com
-    # Passwords will be encrypted after initial setting !!
-    userEmailPassword: dezjuhssjodpzyke
-    targetEmailAddresses:
-      - target1@example.com
-      - target2@example.com
-      - target3@example.com
-    targetEmailTitle:
-      - title1
-      - title2
-      - title3
-    properties:
-      protocol: imaps
-      host: imap.gmail.com
-      port: 993
+emailSettings:
+  userEmail: hoster@gmail.com
+  # Passwords will be encrypted after initial setting !!
+  userEmailPassword: blabla-to-blabla
+  targetEmailAddresses:
+    - target1@example.com
+    - target2@example.com
+    - target3@example.com
+  targetEmailTitle:
+    - title1
+    - title2
+    - title3
+  properties:
+    protocol: imaps
+    host: imap.gmail.com
+    port: 993
 
-  options:
-    receivingEmailLabelName:
-      - マク
-  #    - INBOX # Default
+options:
+  receivingEmailLabelName:
+    - マク
+#    - INBOX # Default
 
-  database:
-    url: jdbc:postgresql://localhost:5432/CCM
-    host: your-database-host
-    port: 5432
-    username: postgres
-    password: ccm1
-    database: CCM
+database:
+  url: jdbc:postgresql://localhost:5432/CCM
+  host: your-database-host
+  port: 5432
+  username: postgres
+  password: ccm1
+  database: CCM
