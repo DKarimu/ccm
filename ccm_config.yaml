@@ -2,9 +2,9 @@ application:
   applicationVersion: 0.0.0
 
 emailSettings:
-  userEmail: d.erikrimo@gmail.com
+  userEmail: hoster@gmail.com
   # Passwords will be encrypted after initial setting !!
-  userEmailPassword: dezjuhssjodpzyke
+  userEmailPassword: blabla-to-blabla
   targetEmailAddresses:
     - target1@example.com
     - target2@example.com
