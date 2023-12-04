@@ -25,7 +25,7 @@ public class ConfigServiceTest {
 
         String userEmail = configService.getUserEmail();
         assertNotNull(userEmail);
-        assertEquals("d.erikrimo@gmail.com", userEmail);
+        assertEquals("hoster@gmail.com", userEmail);
     }
 
     @Test
@@ -35,7 +35,7 @@ public class ConfigServiceTest {
 
         String userEmailPassword = configService.getUserEmailPassword();
         assertNotNull(userEmailPassword);
-        assertEquals("dezjuhssjodpzyke", userEmailPassword);
+        assertEquals("blabla-to-blabla", userEmailPassword);
     }
 
     @Test
