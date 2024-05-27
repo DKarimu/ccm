@@ -12,7 +12,7 @@ Mavin Java Settings is a project that facilitates efficient configuration manage
 
 By leveraging Mavin Java Settings, developers can efficiently manage project settings, dependencies, and configurations, enhancing the overall development experience.
 
-## Getting Started
+## Getting Started(Mavin)
 
 To get started with Mavin Java Settings, follow the instructions below:
 
