@@ -1,16 +1,16 @@
-# Mavin Java Settings
+# Credit Card Manager System
 
-Mavin Java Settings is a project that facilitates efficient configuration management for Java applications. It simplifies the process of setting up Maven projects by providing a centralized platform for defining and managing project settings.
+The Credit Card Manager System is a project that automates the retrieval of credit card payment information from emails and stores it in a database. It streamlines the process of managing credit card payments by extracting relevant data from emails and securely storing it for further analysis and record-keeping.
 
 ## Key Features
 
-- **Dependency Management:** The system streamlines the inclusion of external libraries and dependencies in Maven projects.
-- **Plugin Configuration:** It allows for easy configuration of Maven plugins, enhancing project customization.
-- **Property Management:** The system provides a structured way to manage project properties, making it easy to handle various configurations.
-- **Build Lifecycle:** Mavin Java Settings optimizes the Maven build lifecycle, ensuring a smooth and efficient project build process.
-- **Profile Management:** Developers can define profiles for different environments, allowing for flexible and tailored configurations.
+- **Email Integration:** The system integrates with email accounts to automatically fetch credit card payment-related emails.
+- **Data Extraction:** It extracts essential information from the emails, including credit card numbers, payment amounts, payment dates, and transaction details.
+- **Database Storage:** The extracted payment data is securely stored in a database, ensuring easy access and retrieval.
+- **Encryption:** Sensitive data, such as credit card numbers and user passwords, is encrypted to maintain data security.
+- **Reporting and Analysis:** The system provides tools for generating reports and performing analysis on credit card payment data, offering insights into spending patterns, payment trends, and other relevant metrics.
 
-By leveraging Mavin Java Settings, developers can efficiently manage project settings, dependencies, and configurations, enhancing the overall development experience.
+By leveraging automation and robust data management capabilities, the Credit Card Manager System simplifies credit card payment tracking and provides a centralized platform for securely storing and analyzing payment information.
 
 ## Getting Started(Mavin)
 
@@ -26,7 +26,7 @@ Please refer to the documentation for detailed instructions on configuring and c
 
 ## Contributing
 
-We welcome contributions to Mavin Java Settings. If you have ideas, improvements, or bug fixes, feel free to open an issue or submit a pull request. Let's collaborate to enhance the system and simplify Java project configuration.
+We welcome contributions to the Credit Card Manager System. If you have any ideas, improvements, or bug fixes, feel free to open an issue or submit a pull request. Let's work together to enhance the system and make credit card payment management more efficient.
 
 ## License
 
